@@ -27,7 +27,7 @@ def process_vanishing_point_refined(image_path):
             x1, y1, x2, y2 = line[0]
             
             # Calculate angle. If the line is too horizontal (near 0°) 
-            # or perfectly vertical, ignore it.
+            # or perfectly vertical, ignoring it.
             angle = np.abs(np.arctan2(y2 - y1, x2 - x1) * 180 / np.pi)
             if 10 < angle < 80 or 100 < angle < 170:
                 filtered_lines.append(line[0])
