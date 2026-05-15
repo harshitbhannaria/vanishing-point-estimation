@@ -26,7 +26,6 @@ def process_vanishing_point_refined(image_path):
         for line in lines:
             x1, y1, x2, y2 = line[0]
             
-            # 3. SLOPE FILTERING: 
             # Calculate angle. If the line is too horizontal (near 0°) 
             # or perfectly vertical, ignore it.
             angle = np.abs(np.arctan2(y2 - y1, x2 - x1) * 180 / np.pi)
