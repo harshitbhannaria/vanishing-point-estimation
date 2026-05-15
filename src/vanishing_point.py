@@ -46,7 +46,7 @@ def process_vanishing_point_refined(image_path):
                 if abs(det) > 100:
                     x = (b2 * c1 - b1 * c2) / det
                     y = (a1 * c2 - a2 * c1) / det
-                    # Only keep intersections in the upper-middle of the image AS INITIALLY IT WAS GETTING CONFUSED WITH THE LINEAR TREE BRANCHES.
+                    # Only keep intersections in the upper-middle of the image AS INITIALLY IT WAS GETTING CONFUSED WITH THE LINEAR TREE BRANCHES. Hence no intersection will be seen.
                     if 0 < x < img.shape[1] and 0 < y < img.shape[0] * 0.7:
                         intersections.append((x, y))
 
